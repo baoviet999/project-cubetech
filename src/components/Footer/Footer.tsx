@@ -81,7 +81,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer__bt">
-                    <span>2021 RadiantThemes. All Rights Reserved.</span>
+                    <span>2021 Copyright. All Rights menma.</span>
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 @use 'scss/index.scss' as *;
 .new {
     width: 100%;
-    @include mobile{
-        padding:0 10px;
+    @include mobile {
+        padding: 0 10px;
         margin-bottom: 100px;
     }
     &__title {
@@ -59,8 +59,15 @@
                 width: 70%;
                 padding-top: 22%;
                 margin-right: 20px;
+                @include mobile {
+                    width: 140px;
+                }
             }
             &--content {
+                @include mobile {
+                    flex: 1 1;
+                    max-width: 220px;
+                }
                 & > p {
                     margin: 0 0 10px 0;
                     white-space: nowrap;

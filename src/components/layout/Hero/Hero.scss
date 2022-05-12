@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include tablet {
         padding-top: 500px;
         height: 600px;
@@ -14,7 +17,7 @@
     @include mobile {
         align-items: flex-start;
         margin-bottom: 100px;
-        padding:0 10px;
+        padding: 0 10px;
     }
 
     &__left {
@@ -112,7 +115,6 @@
         &--img {
             position: absolute;
             width: 135%;
-            background-image: url('https://softek.radiantthemes.com/wp-content/uploads/revslider/slider-32/Ban01.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

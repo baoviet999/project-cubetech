@@ -10,6 +10,10 @@
     visibility: hidden;
     user-select: none;
     transition: all 0.2s ease-in-out;
+    @include mobile {
+        position : unset;
+        display: none;
+    }
     &__list {
         display: flex;
         align-items: flex-start;

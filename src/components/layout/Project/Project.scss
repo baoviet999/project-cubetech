@@ -11,7 +11,9 @@
         padding: 70px 0;
         @include flex(space-between);
         @include menma {
-            padding: 30px 0;
+            padding: 30px 10px;
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
     &__content {
@@ -20,21 +22,21 @@
             font-weight: 600;
             font-size: 3.2rem;
             margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // số dòng muốn hiển thị
+            -webkit-box-orient: vertical;
+            text-overflow: ellipse;
+            overflow: hidden;
         }
         & > p {
             font-size: 1.3rem;
             color: $white-color;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // số dòng muốn hiển thị
+            -webkit-box-orient: vertical;
+            text-overflow: ellipse;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
-    }
-    &__btn {
-        border-radius: $border-radius;
-        background-color: #ffffff;
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-transform: none;
-        line-height: 25px;
-        letter-spacing: 0px;
-        color: #fc6f5e;
-        padding: 11px 33px 11px 33px;
     }
 }

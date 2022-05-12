@@ -3,7 +3,17 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import './Hero.scss';
 
-const Hero = () => {
+interface HeroProps {
+    custom: {
+        bg?: string;
+        label?: string;
+        name?: string;
+        title?: string;
+        btnContent?: string;
+    };
+}
+
+const Hero = ({ custom: { bg, label, name, title, btnContent } }: HeroProps) => {
     const variants = {
         open: { opacity: 0, x: -250 },
         closed: { opacity: 1, x: 0 },
@@ -22,7 +32,7 @@ const Hero = () => {
                                 transition={{ duration: 1 }}
                                 variants={variants}
                             >
-                                IT Services Designer
+                                {label}
                             </motion.h3>
                             <motion.h1
                                 initial="open"
@@ -30,7 +40,7 @@ const Hero = () => {
                                 transition={{ duration: 1, delay: 0.1 }}
                                 variants={variants}
                             >
-                                Awesome IT Services For Your Business
+                                {name}
                             </motion.h1>
                             <motion.p
                                 initial="open"
@@ -38,8 +48,7 @@ const Hero = () => {
                                 transition={{ duration: 1, delay: 0.2 }}
                                 variants={variants}
                             >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio,
-                                molestiae dolore unde assumenda earum deserunt aspernatur quaerat,
+                                {title}
                             </motion.p>
                             <motion.div
                                 variants={variants}
@@ -51,7 +60,7 @@ const Hero = () => {
                                 <Button title="Start a Project" x={30} />
                                 <div className="hero__left--btn hero__left--call">
                                     <h4>Call us 888-123-4587</h4>
-                                    <h4>For any question</h4>
+                                    <h4>{btnContent}</h4>
                                 </div>
                             </motion.div>
                         </div>
@@ -60,7 +69,6 @@ const Hero = () => {
                         <div className="hero__right">
                             <motion.div
                                 initial={{ x: 200, opacity: 0 }}
-                                // animate={{ x: 0, opacity: 1 }}
                                 whileInView={{
                                     x: 0,
                                     opacity: 1,
@@ -69,6 +77,7 @@ const Hero = () => {
                                 viewport={{ once: false }}
                                 transition={{ ease: 'easeInOut', duration: 1 }}
                                 className="hero__right--img"
+                                style={{ backgroundImage: `url(${bg})` }}
                             ></motion.div>
                         </div>
                     </div>

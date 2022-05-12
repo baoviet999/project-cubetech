@@ -10,10 +10,19 @@ import Solution from 'components/layout/Solution/Solution';
 import React from 'react';
 import '../../components/layout/Analyst/Analyst.scss';
 import './Home.scss';
+
+const heroHomePage = {
+    label: 'IT Services Designer',
+    name: 'Awesome IT Services For Your Business',
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio,molestiae dolore unde assumenda earum deserunt aspernatur quaerat,',
+    bg: 'https://softek.radiantthemes.com/wp-content/uploads/revslider/slider-32/Ban01.png',
+    btnContent: 'For any question',
+};
+
 const Home = () => {
     return (
         <div className="home">
-            <Hero />
+            <Hero custom={heroHomePage} />
             <Services />
             <Discover />
             <Analyst />

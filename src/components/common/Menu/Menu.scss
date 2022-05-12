@@ -20,6 +20,21 @@
     visibility: hidden;
     user-select: none;
     transition: all 0.2s ease-in-out;
+    @include mobile {
+        position: unset;
+        left: unset;
+        transform: unset;
+        left: unset;
+        padding: 10px;
+        width: 100%;
+        height: unset;
+        min-height: 0px;
+        background-color: #fff;
+        user-select: unset;
+        height: 0px;
+        display: none;
+        height: 0;
+    }
     &-badge {
         background: linear-gradient(to right, #ff3834 0%, #ff7133 100%);
         padding: 3px 8px;
@@ -31,6 +46,8 @@
         width: auto !important;
         margin: 0;
         margin-left: $gap;
+        opacity: 1;
+        visibility: visible;
     }
     &-drop {
         display: flex;

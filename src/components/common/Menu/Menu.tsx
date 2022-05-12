@@ -16,7 +16,7 @@ const Menu = () => {
     }, []);
 
     return (
-        <div className={`menu }`} ref={menuRef}>
+        <div className={`menu`} ref={menuRef}>
             <div className="row">
                 <div className="col l-3">
                     <div className="menu-drop" ref={listItemRef}>

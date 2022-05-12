@@ -11,7 +11,7 @@ type Props = {
 const DropItem = ({ item, indx }: Props) => {
     return (
         <li className="header__item" key={indx}>
-            <a href="1">
+            <a href="#">
                 <h5>{item.name}</h5>
                 <img src={drop} alt="" />
             </a>
