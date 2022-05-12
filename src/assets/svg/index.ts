@@ -1,0 +1,9 @@
+export { ReactComponent as Book } from './Book.svg';
+export { ReactComponent as Dot } from './Dot.svg';
+export { ReactComponent as DotOrange } from './DotOrange.svg';
+export { ReactComponent as Solution } from './Solution.svg';
+export { ReactComponent as Call } from './Call.svg';
+export { ReactComponent as Email } from './Email.svg';
+export { ReactComponent as Setting } from './Setting.svg';
+export { ReactComponent as Brain } from './Brain.svg';
+export { ReactComponent as Increate } from './Increate.svg';

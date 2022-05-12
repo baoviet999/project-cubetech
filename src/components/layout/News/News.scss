@@ -1,0 +1,83 @@
+@use 'scss/index.scss' as *;
+.new {
+    width: 100%;
+    @include mobile{
+        padding:0 10px;
+        margin-bottom: 100px;
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+        & > h3 {
+            color: #013ca3;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        & > h1 {
+            font-size: 3.1rem;
+            color: $text-color;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+    }
+    &__item {
+        width: 100%;
+
+        &--img {
+            width: 100%;
+            padding-top: 60%;
+            background-image: url(https://softek.radiantthemes.com/wp-content/uploads/2020/11/02-blog-7-768x446.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            border-radius: $border-radius;
+            position: relative;
+        }
+        &--content {
+            & > p {
+                color: $text-second;
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 10px 0;
+                line-height: 20px;
+                width: 95%;
+            }
+            & > h3 {
+                color: $text-color;
+                font-weight: 600;
+                font-size: 1.7rem;
+                // width: 95%;
+            }
+        }
+        &-sub {
+            display: flex;
+            align-items: flex-start;
+            &--img {
+                width: 70%;
+                padding-top: 22%;
+                margin-right: 20px;
+            }
+            &--content {
+                & > p {
+                    margin: 0 0 10px 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        &--tag {
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            padding: 6px 12px;
+            background-color: #1367fe;
+            border-radius: $border-radius;
+            color: $white-color;
+            font-size: 1.1rem;
+        }
+    }
+}

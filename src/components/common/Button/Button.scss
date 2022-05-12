@@ -1,0 +1,18 @@
+@use 'scss/index.scss' as *;
+.btn {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $white-color;
+    background: linear-gradient(90deg, rgb(255, 56, 52) 0%, rgb(255, 113, 51) 100%);
+    @include flex();
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 11px 14px -7px rgb(0 0 0 / 15%);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 11px 14px -7px rgb(0 0 0 / 25%);
+    }
+}

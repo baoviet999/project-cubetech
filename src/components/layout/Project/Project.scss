@@ -1,0 +1,40 @@
+@use 'scss/index.scss' as *;
+.project {
+    margin: 100px 0;
+    box-shadow: 0px 0px 38px 0px rgb(23 22 139 / 16%);
+    background-image: url(http://softek.radiantthemes.com/wp-content/uploads/2021/04/19.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__wrap {
+        width: 100%;
+        padding: 70px 0;
+        @include flex(space-between);
+        @include menma {
+            padding: 30px 0;
+        }
+    }
+    &__content {
+        & > h1 {
+            color: $white-color;
+            font-weight: 600;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+        & > p {
+            font-size: 1.3rem;
+            color: $white-color;
+        }
+    }
+    &__btn {
+        border-radius: $border-radius;
+        background-color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: none;
+        line-height: 25px;
+        letter-spacing: 0px;
+        color: #fc6f5e;
+        padding: 11px 33px 11px 33px;
+    }
+}

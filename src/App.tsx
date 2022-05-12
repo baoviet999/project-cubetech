@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import 'swiper/css';
 import './App.css';
-
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Home from './pages/Home/Home';
+import MainLayout from './pages/MainLayout/MainLayout';
+import Loading from 'components/layout/Loading/Loading';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [loading, setLoading] = useState(true);
+    setTimeout(() => {
+        setLoading(false);
+    }, 3000);
+    return (
+        <>
+            {loading ? (
+                <Loading />
+            ) : (
+                <Routes>
+                    <Route path="/" element={<MainLayout />}>
+                        <Route index element={<Home />} />
+                    </Route>
+                </Routes>
+            )}
+        </>
+    );
 }
 
 export default App;

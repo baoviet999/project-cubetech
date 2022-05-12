@@ -1,0 +1,18 @@
+export const MENU_DROP = [
+    { active: { color: 'orange', title: 'Hot' }, link: '#', name: 'Home Version One' },
+    { link: '#', name: 'Home Version Two' },
+    { link: '#', name: 'Home Version Three' },
+    { link: '#', name: 'Home Version Four' },
+    { link: '#', name: 'Home Version Five' },
+    { link: '#', name: 'Home Version Six' },
+    { link: '#', name: 'Home Version Seven' },
+    { link: '#', name: 'Home Version Eight' },
+    { active: { color: 'blue', title: 'New' }, link: '#', name: 'Home Version Nine' },
+    { link: '#', name: 'Home Version Ten' },
+    { link: '#', name: 'Home Version Eleven' },
+    { link: '#', name: 'Home Version Twelve' },
+    { link: '#', name: 'Home Version Thirteen' },
+    { link: '#', name: 'Home Version Fourteen' },
+    { link: '#', name: 'Home Version Fifteen' },
+    { link: '#', name: 'Home Version Sixteen' },
+];

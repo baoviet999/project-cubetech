@@ -1,0 +1,112 @@
+@use 'scss/index.scss' as *;
+.contact {
+    width: 100%;
+    height: 100vh;
+    @include flex();
+    background-image: url(http://softek.radiantthemes.com/wp-content/uploads/2021/04/Img_13.png);
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include mobile {
+        text-align: center;
+        padding:0 10px;
+    }
+    &__outside {
+        left: 65px !important;
+        top: -207px !important;
+        @include tablet {
+            left: -120px !important;
+        }
+        @include mobile {
+            top: -115px !important;
+            left: -120px !important;
+        }
+    }
+    &__img {
+        width: 100%;
+        padding-top: 100%;
+        background-image: url(https://softek.radiantthemes.com/wp-content/uploads/2021/04/Img01-7.png);
+        background-position: content;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+        @include mobile {
+            text-align: center;
+        }
+        & > h3 {
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: $main-blue;
+            margin: 15px 0;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        & > h1 {
+            color: $text-color;
+            width: 80%;
+            font-size: 3.1rem;
+            margin-bottom: 15px;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        & > p {
+            color: $text-second;
+            font-size: 1.3rem;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        &:hover {
+            .contact__btn--img > svg {
+                transform: translate3d(-6px, 0, 0);
+            }
+        }
+        &--img {
+            height: 60px;
+            width: 60px;
+            @include flex(flex-start);
+            & > svg {
+                width: 47px;
+                height: 47px;
+                transition: all 0.35s cubic-bezier(0.38, 3, 0.57, 1.6);
+                transform: translate3d(0px, 0, 0);
+            }
+        }
+        &--call {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            & > h3 {
+                font-weight: 500;
+                font-size: 1.3rem;
+                color: $text-second;
+                &:last-child {
+                    color: #104cba;
+                }
+            }
+        }
+    }
+}

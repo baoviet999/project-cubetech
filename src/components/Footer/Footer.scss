@@ -1,0 +1,112 @@
+@use 'scss/index.scss' as *;
+.footer {
+    background-image: url(http://softek.radiantthemes.com/wp-content/uploads/2020/10/Footer.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 200px;
+    height: 550px;
+    @include flex();
+    @include menma {
+        flex-direction: column;
+        height: 100vh;
+    }
+    @include mobile {
+        height: fit-content;
+        padding: 0 10px;
+    }
+    &__logo {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        @include mobile {
+            margin-bottom: 20px;
+        }
+        & > img {
+            width: 140px;
+        }
+        & > p {
+            color: $white-color;
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 20px;
+            margin: 20px 0;
+        }
+        &-icons {
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 25px;
+            & > svg {
+                width: 100%;
+                height: 100%;
+                fill: #fff;
+            }
+        }
+    }
+    &__section {
+        width: 100%;
+        @include mobile {
+            margin-bottom: 20px;
+        }
+        & > h3 {
+            color: $white-color;
+            font-weight: 600;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & > li {
+                & > a {
+                    color: $white-color;
+                    font-size: 1.3rem;
+                    display: block;
+                    padding: 8px 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__input {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 4px;
+        overflow: hidden;
+        & > input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 10px 20px;
+        }
+        &--img {
+            @include flex();
+            width: 45px;
+            height: 45px;
+            background-image: url(https://softek.radiantthemes.com/wp-content/themes/softek/assets/images/sub-button.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__bt {
+        margin-top: 100px;
+        width: 100%;
+        padding: 25px 0;
+        @include flex();
+        border-top: 1px solid #515dbb;
+        & > span {
+            color: #a7b4df;
+            font-weight: 400;
+            font-size: 1.15rem;
+        }
+    }
+}

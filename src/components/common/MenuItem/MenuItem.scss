@@ -1,0 +1,53 @@
+@use 'scss/index.scss' as *;
+.menu-item {
+    position: absolute;
+    bottom: -155px;
+    padding: $gap * 2;
+    background-color: $white-color;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 200px;
+        min-height: fit-content;
+        & > li {
+            line-height: 35px;
+            cursor: pointer;
+            position: relative;
+            & > a {
+                color: $text-color;
+                transition: all 0.2s ease-in-out;
+                font-size: 1.35rem;
+                font-weight: 500;
+                position: relative;
+                text-decoration: none;
+                &::after {
+                    content: '';
+                    z-index: 0;
+                    position: absolute;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: $main-blue;
+                    transform-origin: center right;
+                    transform: scaleX(0);
+                    transition: transform 0.25s ease-in-out;
+                }
+                &:hover {
+                    color: $main-blue;
+                }
+                &:hover::after {
+                    transform-origin: center left;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}

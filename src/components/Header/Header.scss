@@ -1,0 +1,117 @@
+@use 'scss/index.scss' as *;
+.header {
+    width: 100%;
+    height: $header-height;
+    background-color: $header-bg;
+    box-shadow: $header-shadow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+    @include mobile {
+        padding: 0 10px;
+    }
+    &.active {
+        box-shadow: 0 12px 6px rgb(0 0 0 / 6%);
+        height: calc(#{$header-height - 3});
+    }
+    &-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__logo {
+        width: 145px;
+        height: 45px;
+        & > img {
+            width: 100%;
+            height: 45px;
+            object-fit: cover;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        height: $header-height;
+        margin-right: 50px;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__item {
+        margin: 0 15px;
+        &:hover {
+            .menu,
+            .menu-item {
+                opacity: 1;
+                visibility: visible;
+                user-select: auto;
+            }
+        }
+        & > a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $header-height;
+            position: relative;
+            &:hover {
+                & > h5 {
+                    color: $main-blue;
+                }
+                & > img {
+                    transform: rotate(180deg);
+                }
+            }
+            & > h5 {
+                color: $text-color;
+                font-size: 1.4rem;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+            }
+            & > img {
+                width: 9px;
+                height: 9px;
+                transition: all 0.2s ease-in-out;
+                margin-left: 5px;
+            }
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+    &__cart,
+    &__search {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        & > svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &__cart--badge {
+        position: absolute;
+        top: -10px;
+        right: -14px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #ff583d;
+        transition: all 0.3s ease-in-out;
+        @include flex();
+    }
+}
