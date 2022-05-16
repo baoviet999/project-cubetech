@@ -3,12 +3,14 @@
     width: 100%;
     height: 100vh;
     padding: 100px 0;
+    margin-bottom: 100px;
     @include flex();
     @include background('http://softek.radiantthemes.com/wp-content/uploads/2021/04/Ban03.png');
     @include menma {
         margin-bottom: 200px;
         padding: 0 10;
     }
+    flex-direction: row-reverse;
     &__img {
         background-image: url('https://softek.radiantthemes.com/wp-content/uploads/2021/04/Ban12-7.png');
         background-position: center;

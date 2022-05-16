@@ -1,0 +1,20 @@
+@use 'scss/index.scss' as *;
+.about-team {
+    width: 100%;
+    height: 100vh;
+    @include flex();
+    &__title {
+        text-align: center;
+        & > h2 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: $main-blue;
+            margin-bottom: $gap;
+        }
+        & > h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: $gap-lg;
+        }
+    }
+}

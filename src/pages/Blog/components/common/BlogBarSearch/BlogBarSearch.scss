@@ -1,0 +1,43 @@
+@use 'scss/index.scss' as *;
+.blog-bar__search {
+    position: relative;
+    margin-bottom: 55px;
+    & > input {
+        vertical-align: top;
+        width: 100%;
+        height: 55px;
+        padding: 0px 45px 0px 10px;
+        border: 1px solid #d0dcec;
+        background: #fafafa;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #696969;
+        transition: all 0.3s ease-in-out;
+        border-radius: $border-radius;
+        &:focus,
+        &:hover {
+            outline: none;
+            border: 1px solid $main-blue;
+        }
+    }
+    &--icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55px;
+        height: 55px;
+        padding: 0;
+        border: none;
+        background: #ff4435;
+        border-radius: 4px;
+        font-size: 0;
+        color: #fff;
+        @include flex();
+        & > svg {
+            height: 21px;
+            width: 100%;
+            fill: #fff;
+        }
+    }
+}

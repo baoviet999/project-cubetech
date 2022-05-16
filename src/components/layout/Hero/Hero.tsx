@@ -10,10 +10,16 @@ interface HeroProps {
         name?: string;
         title?: string;
         btnContent?: string;
+        bgInfo?: {
+            bgWidth?: string;
+            bgHegth?: string;
+        };
     };
 }
 
-const Hero = ({ custom: { bg, label, name, title, btnContent } }: HeroProps) => {
+const Hero = ({
+    custom: { bg, label, name, title, btnContent, bgInfo = { bgWidth: '100%', bgHegth: '100%' } },
+}: HeroProps) => {
     const variants = {
         open: { opacity: 0, x: -250 },
         closed: { opacity: 1, x: 0 },
@@ -77,7 +83,11 @@ const Hero = ({ custom: { bg, label, name, title, btnContent } }: HeroProps) => 
                                 viewport={{ once: false }}
                                 transition={{ ease: 'easeInOut', duration: 1 }}
                                 className="hero__right--img"
-                                style={{ backgroundImage: `url(${bg})` }}
+                                style={{
+                                    backgroundImage: `url(${bg})`,
+                                    paddingTop: bgInfo.bgHegth,
+                                    width: bgInfo.bgWidth,
+                                }}
                             ></motion.div>
                         </div>
                     </div>

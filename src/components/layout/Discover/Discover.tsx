@@ -3,7 +3,18 @@ import Button from 'components/common/Button/Button';
 import { motion } from 'framer-motion';
 import React from 'react';
 import './Discover.scss';
-const Discover = () => {
+
+interface DiscoverProps {
+    bgImage?: string;
+    content?: {
+        name: string;
+        title: string;
+        info: string;
+    };
+    isReverce?: boolean;
+}
+
+const Discover = ({ bgImage, content, isReverce = false }: DiscoverProps) => {
     const variants = {
         open: { opacity: 0, y: 100 },
         closed: { opacity: 1, y: 0 },
@@ -11,9 +22,9 @@ const Discover = () => {
     return (
         <div className="discover">
             <div className="grid wide">
-                <div className="row gutter">
+                <div className="row gutter" style={{ flexDirection: `${isReverce ? 'row-reverse' : 'row'}` }}>
                     <div className="col l-6 m-12 c-12">
-                        <div className="discover__img">
+                        <div className="discover__img" style={{ backgroundImage: `url(${bgImage})` }}>
                             <div className="discover__img-sub"></div>
                         </div>
                     </div>
@@ -25,7 +36,7 @@ const Discover = () => {
                                 whileInView="closed"
                                 transition={{ duration: 0.8 }}
                             >
-                                Discover Our Company
+                                {content?.name}
                             </motion.h3>
                             <motion.h1
                                 variants={variants}
@@ -33,7 +44,7 @@ const Discover = () => {
                                 whileInView="closed"
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
-                                Bringing New IT Business Solutions And Ideas
+                                {content?.title}
                             </motion.h1>
                             <motion.p
                                 variants={variants}
@@ -41,8 +52,7 @@ const Discover = () => {
                                 whileInView="closed"
                                 transition={{ duration: 0.8, delay: 0.3 }}
                             >
-                                Lorem Ipsum is simply dummy text of the printing and typesetting has been the
-                                industry’s standard dummy text.
+                                {content?.info}
                             </motion.p>
                             <motion.div
                                 variants={variants}
@@ -67,7 +77,7 @@ const Discover = () => {
                                 initial="open"
                                 whileInView="closed"
                                 transition={{ duration: 0.8, delay: 0.5 }}
-                                onViewportEnter={()=>console.log('aaaaaa')}
+                                onViewportEnter={() => console.log('aaaaaa')}
                                 className="discover__content--section"
                             >
                                 <div className="discover__content--dot">

@@ -8,6 +8,10 @@ const Homev2 = () => {
         title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio,molestiae dolore unde assumenda earum deserunt aspernatur quaerat,',
         bg: 'https://softek.radiantthemes.com/wp-content/uploads/revslider/slider-27/vec01.png',
         btnContent: 'For any question',
+        bgInfo: {
+            bgWidth: '100%',
+            bgHegth: '70%',
+        },
     };
     return (
         <div className="home">

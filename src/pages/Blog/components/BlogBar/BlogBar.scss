@@ -1,0 +1,7 @@
+@use 'scss/index.scss' as *;
+.blog-bar {
+    @include flex();
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0;
+}

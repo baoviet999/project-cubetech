@@ -1,0 +1,48 @@
+@use 'scss/index.scss' as *;
+.blog-bar__card {
+    @include flex();
+    flex-direction: column;
+    box-shadow: 0px 3px 20px rgb(0 0 0 / 10%);
+    border-radius: $border-radius;
+    padding: 20px 30px 30px 30px;
+    margin-bottom: 55px;
+    &--img {
+        width: 130px;
+        height: 130px;
+        margin-bottom: $gap-lg;
+        & > img {
+            width: 130px;
+            height: 130px;
+            transform: scale(1);
+            border: 2px solid red;
+            border-radius: 100%;
+            padding: 10px;
+        }
+    }
+    & > h3 {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: $text-color;
+        margin-bottom: $gap-md;
+    }
+    & > p {
+        color: #696969;
+        font-size: 1.4rem;
+        line-height: 25px;
+        letter-spacing: 0.5px;
+        margin-bottom: $gap-md;
+    }
+    &--icons {
+        width: 100%;
+        @include flex();
+        gap: $gap;
+    }
+    &--icon {
+        width: 30px;
+        height: 30px;
+        & > svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -17,6 +17,10 @@ const heroHomePage = {
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio,molestiae dolore unde assumenda earum deserunt aspernatur quaerat,',
     bg: 'https://softek.radiantthemes.com/wp-content/uploads/revslider/slider-32/Ban01.png',
     btnContent: 'For any question',
+    bgInfo: {
+        bgWidth: '135%',
+        bgHeigth: '135%',
+    },
 };
 
 const Home = () => {
@@ -24,7 +28,15 @@ const Home = () => {
         <div className="home">
             <Hero custom={heroHomePage} />
             <Services />
-            <Discover />
+            <Discover
+                bgImage="https://softek.radiantthemes.com/wp-content/uploads/2021/04/Ban12-7.png"
+                content={{
+                    name: 'Discover Our Company',
+                    title: 'Bringing New IT Business Solutions And Ideas',
+                    info: 'Lorem Ipsum is simply dummy text of the printing and typesetting has been the industry’s standard dummy text.',
+                }}
+            />
+
             <Analyst />
             <Solution />
             <Featured />

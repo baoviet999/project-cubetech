@@ -1,0 +1,31 @@
+@use 'scss/index.scss' as *;
+.about {
+    &-banner {
+        width: 100%;
+        padding-top: 20%;
+        margin-top: $header-height;
+        @include flex();
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &__content {
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%, 50%);
+            text-align: center;
+            & > h1 {
+                font-size: 4.5rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+                color: $white-color;
+            }
+            & > h4 {
+                color: $white-color;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
