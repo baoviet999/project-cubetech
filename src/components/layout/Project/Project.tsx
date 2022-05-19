@@ -1,13 +1,10 @@
 import Button from 'components/common/Button/Button';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { variants } from 'utils/variants';
 import './Project.scss';
 
 const Project = () => {
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
     return (
         <div className="project">
             <div className="grid wide">

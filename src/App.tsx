@@ -12,6 +12,11 @@ import About from 'pages/About/About';
 import About2 from 'pages/About2/About2';
 import NotFound from 'pages/NotFound/NotFound';
 import Blog from 'pages/Blog/Blog';
+import Pricing from 'pages/Pricing/Pricing';
+import Why from 'pages/WhyChooseUse/Why';
+import Service from 'pages/Service/Service';
+import Service2 from 'pages/Service2/Service2';
+import Team from 'pages/Team/Team';
 function App() {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
@@ -30,6 +35,11 @@ function App() {
                         <Route path="about2" element={<About2 />} />
                         <Route path="notfound" element={<NotFound />} />
                         <Route path="blog" element={<Blog />} />
+                        <Route path="pricing" element={<Pricing />} />
+                        <Route path="why" element={<Why />} />
+                        <Route path="service" element={<Service />} />
+                        <Route path="service2" element={<Service2 />} />
+                        <Route path="team" element={<Team />} />
                     </Route>
                 </Routes>
             )}

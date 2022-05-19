@@ -8,7 +8,6 @@ const Analyst = () => {
         const counts = document.querySelectorAll('.count');
         let interval = 0;
         counts.forEach((count) => {
-            console.log(count);
             let startValue = 0;
             let endValue = parseInt(count.getAttribute('data-set') || '');
             let couter = setInterval(() => {

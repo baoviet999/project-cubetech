@@ -2,13 +2,10 @@ import { NEWDATA } from 'data/newsData';
 import React from 'react';
 import { motion } from 'framer-motion';
 import './News.scss';
+import { variants } from 'utils/variants';
 const News = () => {
     const mainNew = NEWDATA[0];
     const subNew = NEWDATA.slice(1);
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
     return (
         <div className="new">
             <div className="grid wide">

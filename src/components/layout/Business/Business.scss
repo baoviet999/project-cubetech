@@ -1,0 +1,27 @@
+@use 'scss/index.scss' as *;
+.business {
+    width: 100%;
+    background-image: url(http://softek.radiantthemes.com/wp-content/uploads/2020/10/counter-bg-img.jpg);
+    background: linear-gradient(90deg, rgb(255, 56, 52) 0%, rgb(255, 113, 51) 100%);
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    padding: 45px 0 50px 0;
+    @include flex();
+    flex-direction: column;
+    position: relative;
+    margin-top: 200px;
+    & > h1 {
+        color: $white-color;
+        font-weight: 700;
+        font-size: 3.5rem;
+        width: 50%;
+        text-align: center;
+        margin-bottom: $gap-lg;
+    }
+    &__img {
+        position: absolute;
+        right: 90px;
+        top: -100px;
+    }
+}

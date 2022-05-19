@@ -3,6 +3,7 @@
     background-image: url(http://softek.radiantthemes.com/wp-content/uploads/2020/10/About05.png);
     width: 100%;
     height: 100vh;
+    @include flex();
     &__right {
         @include flex();
         width: 100%;

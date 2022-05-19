@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './Solution.scss';
 
-const Solution = () => {
+interface SolutionProps {
+    children?: ReactNode;
+}
+
+const Solution = ({ children }: SolutionProps) => {
     return (
         <div className="solution">
             <div className="grid wide">
@@ -14,9 +18,13 @@ const Solution = () => {
                     </p>
                 </div>
                 <div className="row">
-                    <div className="col l-4">
-                        <div className="solution__list">
-                            {/* <div className="solution__item">
+                    {children ? (
+                        children
+                    ) : (
+                        <>
+                            <div className="col l-4">
+                                <div className="solution__list">
+                                    {/* <div className="solution__item">
                                 <div className="solution__item--img">
                                     <Solution />
                                 </div>
@@ -28,17 +36,17 @@ const Solution = () => {
                                     </p>
                                 </div>
                             </div> */}
-                        </div>
-                    </div>
-                    <div className="col l-4 m-12 c-12">
-                        <div className="solution__img">
-                            <div className="solution__img--bg"></div>
-                        </div>
-                    </div>
+                                </div>
+                            </div>
+                            <div className="col l-4 m-12 c-12">
+                                <div className="solution__img">
+                                    <div className="solution__img--bg"></div>
+                                </div>
+                            </div>
 
-                    <div className="col l-4">
-                        <div className="solution__list">
-                            {/* <div className="solution__item">
+                            <div className="col l-4">
+                                <div className="solution__list">
+                                    {/* <div className="solution__item">
                                 <div className="solution__item--img">
                                     <Solution />
                                 </div>
@@ -50,8 +58,10 @@ const Solution = () => {
                                     </p>
                                 </div>
                             </div> */}
-                        </div>
-                    </div>
+                                </div>
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
         </div>

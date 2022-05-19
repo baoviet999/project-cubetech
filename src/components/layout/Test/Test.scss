@@ -1,0 +1,67 @@
+@use 'scss/index.scss' as *;
+.test {
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-image: url(https://uploads-ssl.webflow.com/618a6ac8b6a3805c556dff5f/618b92591ca8c98095171bb8_blurred_1_alt.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 110px 0px 105px 0px;
+    margin: 150px 0;
+    text-align: center;
+    @include flex();
+    flex-direction: column;
+    & > h3 {
+        color: $main-blue;
+        font-weight: 600;
+        font-size: 2.8em;
+        margin-bottom: $gap * 2;
+    }
+    & > h1 {
+        color: $text-color;
+        font-weight: 700;
+        font-size: 3.4rem;
+        margin-bottom: $gap * 2;
+    }
+    & > p {
+        width: 45%;
+        color: #696969;
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: $gap * 2;
+    }
+    &__card {
+        width: 100%;
+        padding: 45px 0;
+        @include flex();
+        flex-direction: column;
+        & > img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: $gap * 3;
+        }
+        & > p {
+            font-size: 1.5rem;
+            color: #696969;
+            font-weight: 500;
+            width: 80%;
+            text-align: center;
+            margin-bottom: $gap * 4;
+        }
+        & > h4 {
+            color: $text-color;
+            font-weight: 500;
+            margin-bottom: $gap;
+            font-size: 1.6rem;
+        }
+        & > span {
+            color: $main-blue;
+            font-size: 1.4rem;
+        }
+    }
+}

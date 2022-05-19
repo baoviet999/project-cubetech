@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { setMenuHeight } from 'utils/setMenuHeight';
 import './Menu.scss';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 const Menu = () => {
     const menuLeft = MENU_DROP.slice(0, 8);
     const menuRight = MENU_DROP.slice(8);
@@ -23,7 +24,7 @@ const Menu = () => {
                         <ul className="menu-drop__list">
                             {menuLeft.map((item, index) => (
                                 <li key={index}>
-                                    <a href={item.link}>{item.name}</a>
+                                    <Link to={item.link}>{item.name}</Link>
                                     {item.active && <div className="menu-badge">{item.active.title}</div>}
                                 </li>
                             ))}

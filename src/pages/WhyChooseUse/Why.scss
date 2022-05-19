@@ -1,0 +1,102 @@
+@use 'scss/index.scss' as *;
+.why {
+    margin: 100px 0;
+    position: relative;
+    &__line {
+        display: block;
+        position: absolute;
+        top: 170px;
+        bottom: 0;
+        left: 50%;
+        z-index: 0;
+        width: 2px;
+        margin-left: -1px;
+        background: url(https://softek.radiantthemes.com/wp-content/plugins/radiantthemes-addons/assets/images/time-line-dashed.png)
+            repeat-y;
+    }
+    &__left {
+        width: 100%;
+        height: 280px;
+        @include flex();
+        align-items: flex-start;
+        padding: 0 40px;
+        & > img {
+            width: 230px;
+            object-fit: cover;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: flex-start;
+        padding: 0 40px;
+        position: relative;
+        &--line {
+            position: absolute;
+            left: 0;
+        }
+        &--a {
+            background: url(https://softek.radiantthemes.com/wp-content/plugins/radiantthemes-addons/assets/images/top-line.png)
+                repeat-x;
+            display: block;
+            position: absolute;
+            top: 115px;
+            left: 10px;
+            content: ' ';
+            width: 6%;
+            height: 20px;
+            z-index: 0;
+        }
+        &--point {
+        }
+        &--circle {
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: -1%;
+            width: 20px;
+            height: 20px;
+            margin-left: -10px;
+            background-color: #fff;
+            border: 5px solid #104cba;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        &--card {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            background: #fff;
+            box-shadow: 2px 5px 20px 0px rgb(23 22 139 / 8%);
+            padding: 20px 30px;
+            // border-left: 5px solid #104cba;
+            overflow: hidden;
+        }
+        &--num {
+            width: 20%;
+            @include flex();
+            margin-right: 20px;
+            & > span {
+                border-radius: 50%;
+                width: 65px;
+                height: 65px;
+                background-image: linear-gradient(90deg, #30077d 0%, #0f51bf 100%);
+                color: #fff;
+                text-align: center;
+                font-size: 25px;
+                line-height: 65px;
+            }
+        }
+        &--content {
+            & > h5 {
+                font-weight: 600;
+                font-size: 2rem;
+                color: #242222;
+                margin-bottom: $gap;
+            }
+            & > p {
+                color: #696969;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

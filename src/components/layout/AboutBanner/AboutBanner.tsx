@@ -13,7 +13,7 @@ const AboutBanner = ({ data: { name, title } }: AboutBannerProp) => {
         <div
             className="about-banner"
             style={{
-                backgroundImage: `url(http://softek.radiantthemes.com/wp-content/uploads/2020/10/banner-1-7.jpg)`,
+                backgroundImage: `url(https://softek.radiantthemes.com/wp-content/uploads/2020/10/banner-8.jpg)`,
             }}
         >
             <div className="about-banner__content">

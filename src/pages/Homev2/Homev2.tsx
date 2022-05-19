@@ -1,21 +1,32 @@
+import Progress from 'components/common/Progress/Progress';
+import Analyst from 'components/layout/Analyst/Analyst';
+import Brand from 'components/layout/Brand/Brand';
+import Business from 'components/layout/Business/Business';
+import Discover from 'components/layout/Discover/Discover';
+import Featured from 'components/layout/Featured/Featured';
+import Help from 'components/layout/Help/Help';
 import Hero from 'components/layout/Hero/Hero';
+import Services from 'components/layout/Services/Services';
+import { ABOUT_DISCOVER } from 'data/aboutDiscover';
+import { heroHomePage } from 'data/homeV2Data';
 import React from 'react';
 import './Homev2.scss';
 const Homev2 = () => {
-    const heroHomePage = {
-        label: 'IT Services Designer',
-        name: 'Awesome IT Services For Your Business',
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio,molestiae dolore unde assumenda earum deserunt aspernatur quaerat,',
-        bg: 'https://softek.radiantthemes.com/wp-content/uploads/revslider/slider-27/vec01.png',
-        btnContent: 'For any question',
-        bgInfo: {
-            bgWidth: '100%',
-            bgHegth: '70%',
-        },
-    };
     return (
         <div className="home">
             <Hero custom={heroHomePage} />
+            <Discover bgImage={ABOUT_DISCOVER[5].bgImage} content={ABOUT_DISCOVER[5].content} />
+            <Analyst />
+            <Services itemTotal={6} isCol={true} total={4} />
+            <Discover bgImage={ABOUT_DISCOVER[5].bgImage} content={ABOUT_DISCOVER[5].content}>
+                <Progress time={60} />
+                <Progress time={90} />
+                <Progress time={75} />
+            </Discover>
+            <Brand />
+            <Business />
+            <Featured />
+            <Help />
         </div>
     );
 };

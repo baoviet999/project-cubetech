@@ -2,11 +2,8 @@ import { Call, Email } from 'assets/svg';
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Contact.scss';
+import { variants } from 'utils/variants';
 const Contact = () => {
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
     return (
         <div className="contact">
             <div className="hero__outside1 contact__outside"></div>

@@ -1,6 +1,7 @@
 import Button from 'components/common/Button/Button';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { variants } from 'utils/variants';
 import './Hero.scss';
 
 interface HeroProps {
@@ -14,18 +15,15 @@ interface HeroProps {
             bgWidth?: string;
             bgHegth?: string;
         };
+        background?: string;
     };
 }
 
 const Hero = ({
-    custom: { bg, label, name, title, btnContent, bgInfo = { bgWidth: '100%', bgHegth: '100%' } },
+    custom: { bg, label, name, title, btnContent, bgInfo = { bgWidth: '100%', bgHegth: '100%' }, background },
 }: HeroProps) => {
-    const variants = {
-        open: { opacity: 0, x: -250 },
-        closed: { opacity: 1, x: 0 },
-    };
     return (
-        <div className="hero">
+        <div className="hero" style={{ backgroundImage: `url(${background && background})` }}>
             <div className="hero__outside1"></div>
             <div className="hero__outside2"></div>
             <div className="grid wide">

@@ -1,15 +1,17 @@
 import ServiceItem from 'components/common/ServiceItem/ServiceItem';
-import { SERVICE } from 'data/serviceData';
+import { SERVICE, SERVICE2 } from 'data/serviceData';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { variants } from 'utils/variants';
 import './Services.scss';
 
-const Services = () => {
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
+interface ServiceProps {
+    total: number;
+    isCol: boolean;
+    itemTotal: number;
+}
 
+const Services = ({ total, isCol, itemTotal }: ServiceProps) => {
     return (
         <div className="services">
             <div className="grid wide">
@@ -24,8 +26,8 @@ const Services = () => {
                     <h1>Our Featured Services</h1>
                 </motion.div>
                 <div className="row gutter">
-                    {SERVICE.map((item, indx) => (
-                        <ServiceItem key={indx} item={item} indx={indx} total={6} />
+                    {SERVICE2.slice(0, itemTotal).map((item, indx) => (
+                        <ServiceItem isCol={isCol} key={indx} item={item} indx={indx} total={total} />
                     ))}
                 </div>
             </div>

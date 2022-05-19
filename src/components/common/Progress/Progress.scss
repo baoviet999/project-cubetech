@@ -1,0 +1,32 @@
+.progress {
+    width: 100%;
+    &__item {
+        &--name {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            & > p {
+                color: #696969;
+                font-weight: 400;
+                font-size: 1.6rem;
+            }
+        }
+        &--bar {
+            width: 100%;
+            position: relative;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 99px;
+            overflow: hidden;
+            box-shadow: 10px 10px 24px 0 #c37e7175;
+        }
+        &--inner {
+            height: 100%;
+            width: 0%;
+            background-image: linear-gradient(90deg, #ff3834 0%, #ff7133 100%);
+            border-radius: 99px;
+            transition: all linear;
+        }
+    }
+}

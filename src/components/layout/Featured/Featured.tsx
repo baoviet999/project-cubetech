@@ -5,13 +5,10 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { variants } from 'utils/variants';
 import './Featured.scss';
 
 const Featured = () => {
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
     return (
         <div className="featured">
             <div className="grid wide">
@@ -45,7 +42,7 @@ const Featured = () => {
                 <div className="row">
                     <Swiper
                         pagination={true}
-                        modules={[Pagination]}
+                        // modules={[Pagination]}
                         spaceBetween={50}
                         slidesPerView={3}
                         grabCursor={true}

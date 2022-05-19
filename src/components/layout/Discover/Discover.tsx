@@ -1,7 +1,8 @@
 import { Dot, DotOrange } from 'assets/svg';
 import Button from 'components/common/Button/Button';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { ReactNode } from 'react';
+import { variants } from 'utils/variants';
 import './Discover.scss';
 
 interface DiscoverProps {
@@ -12,13 +13,10 @@ interface DiscoverProps {
         info: string;
     };
     isReverce?: boolean;
+    children?: ReactNode;
 }
 
-const Discover = ({ bgImage, content, isReverce = false }: DiscoverProps) => {
-    const variants = {
-        open: { opacity: 0, y: 100 },
-        closed: { opacity: 1, y: 0 },
-    };
+const Discover = ({ bgImage, content, isReverce = false, children }: DiscoverProps) => {
     return (
         <div className="discover">
             <div className="grid wide">
@@ -54,44 +52,50 @@ const Discover = ({ bgImage, content, isReverce = false }: DiscoverProps) => {
                             >
                                 {content?.info}
                             </motion.p>
-                            <motion.div
-                                variants={variants}
-                                initial="open"
-                                whileInView="closed"
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                                className="discover__content--section"
-                            >
-                                <div className="discover__content--dot">
-                                    <Dot />
-                                </div>
-                                <div className="discover__content--title">
-                                    <h3>Engaging Group Discussion</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                                        tellus, luctus nec ullamcorper mattis
-                                    </p>
-                                </div>
-                            </motion.div>
-                            <motion.div
-                                variants={variants}
-                                initial="open"
-                                whileInView="closed"
-                                transition={{ duration: 0.8, delay: 0.5 }}
-                                onViewportEnter={() => console.log('aaaaaa')}
-                                className="discover__content--section"
-                            >
-                                <div className="discover__content--dot">
-                                    <DotOrange />
-                                </div>
-                                <div className="discover__content--title">
-                                    <h3>Engaging Group Discussion</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                                        tellus, luctus nec ullamcorper mattis
-                                    </p>
-                                </div>
-                            </motion.div>
-                            <Button title="Discover More" x={30} />
+                            {children ? (
+                                children
+                            ) : (
+                                <>
+                                    <motion.div
+                                        variants={variants}
+                                        initial="open"
+                                        whileInView="closed"
+                                        transition={{ duration: 0.8, delay: 0.4 }}
+                                        className="discover__content--section"
+                                    >
+                                        <div className="discover__content--dot">
+                                            <Dot />
+                                        </div>
+                                        <div className="discover__content--title">
+                                            <h3>Engaging Group Discussion</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                                elit tellus, luctus nec ullamcorper mattis
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                    <motion.div
+                                        variants={variants}
+                                        initial="open"
+                                        whileInView="closed"
+                                        transition={{ duration: 0.8, delay: 0.5 }}
+                                        onViewportEnter={() => console.log('aaaaaa')}
+                                        className="discover__content--section"
+                                    >
+                                        <div className="discover__content--dot">
+                                            <DotOrange />
+                                        </div>
+                                        <div className="discover__content--title">
+                                            <h3>Engaging Group Discussion</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                                elit tellus, luctus nec ullamcorper mattis
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                    <Button title="Discover More" x={30} />
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

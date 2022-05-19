@@ -31,10 +31,6 @@ const AboutTeam = () => {
                                         <h3>{item.name}</h3>
                                         <h5>{item.title}</h5>
                                     </div>
-                                    {/* <div className="featured__title">
-                                        <h3>Modal moreo</h3>
-                                        <span>HR Manager</span>
-                                    </div> */}
                                 </div>
                             </SwiperSlide>
                         ))}
