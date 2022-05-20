@@ -26,7 +26,7 @@
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 28px;
-            color: #696969;
+            color: $text-second;
         }
     }
     &__info {
@@ -41,7 +41,7 @@
         }
         & > span {
             font-size: 1.3rem;
-            color: #696969;
+            color: $text-second;
         }
     }
 }

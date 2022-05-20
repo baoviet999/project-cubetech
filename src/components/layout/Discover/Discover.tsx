@@ -22,9 +22,16 @@ const Discover = ({ bgImage, content, isReverce = false, children }: DiscoverPro
             <div className="grid wide">
                 <div className="row gutter" style={{ flexDirection: `${isReverce ? 'row-reverse' : 'row'}` }}>
                     <div className="col l-6 m-12 c-12">
-                        <div className="discover__img" style={{ backgroundImage: `url(${bgImage})` }}>
+                        <motion.div
+                            variants={variants}
+                            initial="open"
+                            whileInView="closed"
+                            transition={{ duration: 0.8 }}
+                            className="discover__img"
+                            style={{ backgroundImage: `url(${bgImage})` }}
+                        >
                             <div className="discover__img-sub"></div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="col l-6 m-12 c-12">
                         <div className="discover__content">
@@ -79,7 +86,6 @@ const Discover = ({ bgImage, content, isReverce = false, children }: DiscoverPro
                                         initial="open"
                                         whileInView="closed"
                                         transition={{ duration: 0.8, delay: 0.5 }}
-                                        onViewportEnter={() => console.log('aaaaaa')}
                                         className="discover__content--section"
                                     >
                                         <div className="discover__content--dot">

@@ -12,7 +12,7 @@ export const SERVICE = [
         img: Setting,
     },
     {
-        name: 'Creative Minds',
+        name: 'Creative Minds & me',
         title: 'Aenean pharetra est dictum, ultricies nontem er sum. Cras en pretium hendrerit ultricies',
         img: Brain,
     },
@@ -35,7 +35,7 @@ export const SERVICE2 = [
         img: Setting,
     },
     {
-        name: 'Creative Minds',
+        name: 'Creative Minds & me',
         title: 'Aenean pharetra est dictum, ultricies nontem er sum. Cras en pretium hendrerit ultricies',
         img: Brain,
     },

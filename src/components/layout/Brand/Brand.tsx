@@ -1,10 +1,10 @@
+import { motion } from 'framer-motion';
 import React from 'react';
-import './Brand.scss';
-import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FEATURED } from 'data/fearturedData';
+// import { variants } from 'utils/variants';
+import './Brand.scss';
 const Brand = () => {
     const BRAND_DATA = [
         {
@@ -32,23 +32,33 @@ const Brand = () => {
             img2: 'https://softek.radiantthemes.com/wp-content/uploads/2020/09/logo01_black-7.png',
         },
     ];
+    const variants = {
+        open: { opacity: 0, x: -300 },
+        closed: { opacity: 1, x: 0 },
+    };
 
     return (
         <div className="brand">
-            <div className="grid wide">
+            <motion.div
+                variants={variants}
+                initial="open"
+                whileInView="closed"
+                transition={{ duration: 0.8 }}
+                className="grid wide"
+            >
                 <Swiper pagination={true} spaceBetween={50} slidesPerView={5} grabCursor={true} loop={true}>
                     {BRAND_DATA.map((item, indx) => (
                         <SwiperSlide key={indx}>
-                            <div className="brand__item">
+                            <motion.div className="brand__item">
                                 <div className="brand__img">
                                     <img src={item.img2} alt="" />
                                     <img src={item.img1} alt="" />
                                 </div>
-                            </div>
+                            </motion.div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
+            </motion.div>
         </div>
     );
 };

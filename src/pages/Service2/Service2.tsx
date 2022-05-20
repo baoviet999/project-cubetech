@@ -37,6 +37,8 @@ const Service2 = () => {
             desc: 'consectetur dolor adipisicing elit, do eiusmod printing and typesetting',
         },
     ];
+
+    
     return (
         <div className="service">
             <AboutBanner data={{ name: 'Service', title: 'Service  Service-02' }} />

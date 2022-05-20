@@ -1,4 +1,3 @@
-import Button from 'components/common/Button/Button';
 import Switch from 'components/common/Switch/Switch';
 import { pricingData, pricingDataBig } from 'data/pricingData';
 import React, { useState } from 'react';

@@ -1,3 +1,4 @@
+@use 'scss/index.scss' as *;
 .progress {
     width: 100%;
     &__item {
@@ -5,9 +6,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 7px;
+            margin-bottom: $gap;
             & > p {
-                color: #696969;
+                color: $text-second;
                 font-weight: 400;
                 font-size: 1.6rem;
             }

@@ -42,6 +42,7 @@
         background-color: $white-color;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        gap: $gap;
         &:hover {
             background-color: $main-blue;
             .services__item--img > svg {

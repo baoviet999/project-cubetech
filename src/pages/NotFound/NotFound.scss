@@ -1,7 +1,9 @@
 @use 'scss/index.scss' as *;
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
 .notfound {
     width: 45%;
     text-align: center;
+    font-family: 'Fira Mono', monospace;
     & > h1 {
         text-align: center;
         font-weight: 600;
@@ -10,13 +12,31 @@
         letter-spacing: 2px;
         line-height: 190px;
         margin-bottom: $gap-lg;
+        position: relative;
+        letter-spacing: -7px;
+        animation: glitch 1s linear infinite;
+        &:before,
+        &:after {
+            content: attr(title);
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        &:before {
+            animation: glitchTop 1s linear infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        }
+        &:after {
+            animation: glitchBotom 1.5s linear infinite;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        }
     }
     & > p {
         font-size: 1.7rem;
         line-height: 30px;
         font-weight: 400;
         margin: 0 auto;
-        color: #696969;
+        color: $text-second;
         margin-bottom: $gap-lg;
     }
     &__wrap {
@@ -27,5 +47,47 @@
     &__btn {
         width: 35%;
         margin: 0 auto;
+    }
+}
+
+@keyframes glitch {
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+@keyframes glitchTop {
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+@keyframes glitchBotom {
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
     }
 }

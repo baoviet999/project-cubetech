@@ -27,7 +27,7 @@
     }
     & > p {
         width: 45%;
-        color: #696969;
+        color: $text-second;
         font-weight: 400;
         font-size: 1.4rem;
         text-align: center;
@@ -47,7 +47,7 @@
         }
         & > p {
             font-size: 1.5rem;
-            color: #696969;
+            color: $text-second;
             font-weight: 500;
             width: 80%;
             text-align: center;

@@ -3,7 +3,6 @@ import { BsChevronUp } from 'react-icons/bs';
 import './ScrollToTop.scss';
 const ScrollToTop = () => {
     const [active, setActive] = useState(false);
-    console.log('active: ', active);
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) setActive(true);

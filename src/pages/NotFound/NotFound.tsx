@@ -5,7 +5,9 @@ const NotFound = () => {
     return (
         <div className="notfound__wrap">
             <div className="notfound">
-                <h1>404</h1>
+                <h1 title="404" className="notfound__text">
+                    404
+                </h1>
                 <p>
                     Oops! It could be you or us, there is no page here. It might have been moved or deleted.
                 </p>

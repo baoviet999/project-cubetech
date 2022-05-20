@@ -21,7 +21,7 @@ const Header = () => {
         window.addEventListener('scroll', shrinkHeader);
         return () => window.removeEventListener('scroll', shrinkHeader);
     });
-    console.log(shink);
+
     return (
         <motion.div
             initial={{ y: '0', opacity: 0 }}

@@ -21,7 +21,7 @@ function App() {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
         setLoading(false);
-    }, 0);
+    }, 2000);
     return (
         <>
             {loading ? (
@@ -37,8 +37,8 @@ function App() {
                         <Route path="blog" element={<Blog />} />
                         <Route path="pricing" element={<Pricing />} />
                         <Route path="why" element={<Why />} />
-                        <Route path="service" element={<Service />} />
-                        <Route path="service2" element={<Service2 />} />
+                        <Route path="service" element={<Service2 />} />
+                        <Route path="service2" element={<Service />} />
                         <Route path="team" element={<Team />} />
                     </Route>
                 </Routes>

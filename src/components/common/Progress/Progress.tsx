@@ -20,6 +20,7 @@ const Progress = ({ time }: ProgressProps) => {
         }, 10);
         return () => clearInterval(timer);
     }, [refresh]);
+    
     return (
         <motion.div
             onViewportEnter={() => {
